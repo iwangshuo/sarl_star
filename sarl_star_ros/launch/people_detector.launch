@@ -1,0 +1,7 @@
+<launch>
+
+<!-- People Detector -->
+  <include file="$(find people_velocity_tracker)/launch/tracked_detector.launch" />
+
+
+</launch>

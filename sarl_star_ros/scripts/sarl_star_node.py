@@ -362,7 +362,7 @@ if __name__ == '__main__':
                     break
             rate.sleep()
 
-    except rospy.ROSInterruptException, e:
+    except rospy.ROSInterruptException as e:
         raise e
 
 

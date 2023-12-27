@@ -1,0 +1,13 @@
+<launch>
+
+<!-- Define laser type-->
+  <arg name="laser_type" default="rplidar" />
+
+<!-- Move base -->
+  <arg name="custom_param_file" default="$(find turtlebot_navigation)/param/$(arg laser_type)_costmap_params.yaml"/>
+  <include file="$(find turtlebot_navigation)/launch/includes/$(arg laser_type)_move_base.launch.xml">
+    <arg name="custom_param_file" value="$(arg custom_param_file)"/>
+  </include>
+
+
+</launch>

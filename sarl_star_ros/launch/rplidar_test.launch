@@ -1,0 +1,15 @@
+<launch>
+
+<!-- Define laser type-->
+  <arg name="laser_type" default="rplidar" />
+
+  <!-- laser driver -->
+  <include file="$(find turtlebot_navigation)/laser/driver/$(arg laser_type)_laser.launch" />
+
+  <!-- laser filter (optional) -->
+  <node pkg="laser_filters" type="scan_to_scan_filter_chain"
+      name="laser_filter">
+    <rosparam command="load" file="$(find laser_filters)/laserscan_filter.yaml" />
+  </node>
+
+  </launch>

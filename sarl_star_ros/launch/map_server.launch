@@ -1,0 +1,7 @@
+<launch>
+
+ <!-- Map server -->
+  <arg name="map_file" default="/home/xjmao/catkin_ws_ros/src/sarl_star/sarl_star_ros/map/newmap.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+</launch>
